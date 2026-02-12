@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saul Schaffer - Personal Website
 
-## Getting Started
+A brutalist design personal website built with Next.js and Tailwind CSS.
 
-First, run the development server:
+## Features
+
+- **Brutalist Design**: Bold typography, stark black and white contrast, heavy borders, and raw aesthetic
+- **Next.js 16**: Modern React framework with App Router
+- **Tailwind CSS**: Utility-first styling
+- **TypeScript**: Type-safe development
+- **Static Export**: Fully static site for GitHub Pages
+- **Responsive**: Works on all devices
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build for production:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This generates a static site in the `out/` directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This site is automatically deployed to GitHub Pages using GitHub Actions.
 
-## Deploy on Vercel
+### Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push code to GitHub
+2. Go to repository Settings → Pages
+3. Under "Build and deployment":
+   - Source: GitHub Actions
+4. The GitHub Actions workflow will automatically build and deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Custom Domain
+
+The site is configured for **saulschaffer.com**. Make sure your DNS is set up:
+
+```
+Type: A Records
+Name: @
+Values:
+  185.199.108.153
+  185.199.109.153
+  185.199.110.153
+  185.199.111.153
+
+Type: CNAME
+Name: www
+Value: saultshaker.github.io
+```
+
+## Customization
+
+### Update Links
+
+Edit `app/page.tsx` to update:
+- Google Scholar ID
+- LLNL lab page URL
+- Project details and links
+
+### Style Changes
+
+- `app/globals.css`: Brutalist styles and custom CSS
+- `tailwind.config.ts`: Tailwind configuration
+- `app/page.tsx`: Layout and component styling
+
+### Colors
+
+The brutalist design uses pure black (#000000) and white (#ffffff) for maximum contrast.
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
+- GitHub Pages for hosting
+
+## License
+
+© 2026 Saul Schaffer. All rights reserved.
